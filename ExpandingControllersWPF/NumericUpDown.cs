@@ -1,15 +1,13 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Markup;
 
 
 namespace ExpandingControllersWPF
 {
     [TemplatePart(Name = "PART_UpValue",  Type = typeof(RepeatButton))]
     [TemplatePart(Name = "PART_DownValue", Type = typeof(RepeatButton))]
-    [ContentProperty("Value")]
-    public partial class NumericUpDown : TextBox
+    public partial class NumericUpDown : Control
     {
         #region property
         public static readonly DependencyProperty ValueProperty;

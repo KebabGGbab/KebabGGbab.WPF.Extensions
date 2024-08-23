@@ -44,7 +44,7 @@
                                 <Condition Property="IsFocused" Value="false" />
                                 <Condition Property="Text" Value="" />
                             </MultiTrigger.Conditions>
-                            <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
                             <Setter TargetName="PART_ContentHost" Property="Visibility" Value="Collapsed" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
