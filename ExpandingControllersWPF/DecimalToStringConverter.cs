@@ -1,6 +1,5 @@
 ﻿using System.Globalization;
 using System.Text.RegularExpressions;
-using System.Windows;
 using System.Windows.Data;
 
 namespace ExpandingControllersWPF
@@ -11,16 +10,16 @@ namespace ExpandingControllersWPF
         private bool HaveComma;
         public object? Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is decimal)
+            if (value is decimal dec)
             {
-                string str = value.ToString();
+                string str = dec.ToString();
                 if (HaveComma)
                 {
                     str += ',';
                 }
                 return str;
             }
-            return DependencyProperty.UnsetValue;
+            return string.Empty;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -46,7 +45,7 @@ namespace ExpandingControllersWPF
                     return result;
                 }
             }
-            return 0M;
+            return 0.0M;
         }
     }
 }

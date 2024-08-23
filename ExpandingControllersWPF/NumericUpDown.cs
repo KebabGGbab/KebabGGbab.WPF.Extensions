@@ -14,7 +14,7 @@ namespace ExpandingControllersWPF
         public static readonly DependencyProperty MinValueProperty;
         public static readonly DependencyProperty MaxValueProperty;
         public static readonly DependencyProperty StepProperty;
-        public static readonly DependencyProperty RatingProperty;
+        public static readonly DependencyProperty RoundProperty;
         #endregion
 
         #region accessor
@@ -42,10 +42,10 @@ namespace ExpandingControllersWPF
             set { SetValue(StepProperty, value); }
         }
 
-        public byte Rating
+        public byte Round
         {
-            get { return (byte)GetValue(RatingProperty); }
-            set { SetValue(RatingProperty, value); }
+            get { return (byte)GetValue(RoundProperty); }
+            set { SetValue(RoundProperty, value); }
         }
 
         #endregion
@@ -56,7 +56,7 @@ namespace ExpandingControllersWPF
             MinValueProperty = DependencyProperty.Register("MinValue", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(0.0M));
             MaxValueProperty = DependencyProperty.Register("MaxValue", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(100.0M));
             StepProperty = DependencyProperty.Register("Step", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(1.0M));
-            RatingProperty = DependencyProperty.Register("Rating", typeof(byte), typeof(NumericUpDown), new PropertyMetadata((byte)0));
+            RoundProperty = DependencyProperty.Register("Round", typeof(byte), typeof(NumericUpDown), new PropertyMetadata((byte)0));
             DefaultStyleKeyProperty.OverrideMetadata(typeof(NumericUpDown), new FrameworkPropertyMetadata(typeof(NumericUpDown)));
         }
 
@@ -69,7 +69,8 @@ namespace ExpandingControllersWPF
         {
             NumericUpDown control = (NumericUpDown)d;
             if (baseValue is not decimal value)
-                return DependencyProperty.UnsetValue;
+                return 0.0M;
+            value = Math.Round(value, control.Round);
             if (value < control.MinValue)
                 return control.MinValue;
             if (value > control.MaxValue)
