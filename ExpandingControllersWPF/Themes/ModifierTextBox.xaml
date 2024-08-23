@@ -12,7 +12,7 @@
                 <ControlTemplate TargetType="{x:Type local:ModifierTextBox}">
                     <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
                         <Grid>
-                            <TextBox x:Name="PART_Placeholder" 
+                            <TextBox x:Name="Placeholder" 
                                 Text="{TemplateBinding Placeholder}"
                                 Foreground="{TemplateBinding PlaceholderForeground}"
                                 FontSize="{TemplateBinding PlaceholderFontSize}"

@@ -5,8 +5,6 @@ using System.Windows.Media;
 
 namespace ExpandingControllersWPF
 {
-    [TemplatePart(Name = "PART_Placeholder", Type = typeof(ScrollViewer))]
-    [ContentProperty("Placeholder")]
     public class ModifierTextBox : TextBox
     {
         public static readonly DependencyProperty PlaceholderProperty;
@@ -29,7 +27,6 @@ namespace ExpandingControllersWPF
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ModifierTextBox), new FrameworkPropertyMetadata(typeof(ModifierTextBox)));
         }
 
-        [Localizability(LocalizationCategory.Text)]
         public string Placeholder
         {
             get { return (string)GetValue(PlaceholderProperty); }

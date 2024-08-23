@@ -6,6 +6,8 @@ using System.Windows.Markup;
 
 namespace ExpandingControllersWPF
 {
+    [TemplatePart(Name = "PART_UpValue",  Type = typeof(RepeatButton))]
+    [TemplatePart(Name = "PART_DownValue", Type = typeof(RepeatButton))]
     [ContentProperty("Value")]
     public partial class NumericUpDown : TextBox
     {
@@ -86,7 +88,7 @@ namespace ExpandingControllersWPF
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            if (GetTemplateChild("UpValue") is RepeatButton UpButton && GetTemplateChild("DownValue") is RepeatButton DownButton)
+            if (GetTemplateChild("PART_UpValue") is RepeatButton UpButton && GetTemplateChild("PART_DownValue") is RepeatButton DownButton)
             {
                 UpButton.Click += UpValue_Click;
                 DownButton.Click += DownValue_Click;
