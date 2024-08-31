@@ -7,7 +7,7 @@ namespace ExpandingControllersWPF
         [GeneratedRegex(@"^\d+$")]
         internal static partial Regex StringIsDigit();
 
-        [GeneratedRegex(@"[^0-9,]+")]
+        [GeneratedRegex(@"[^0-9,-]+")]
         internal static partial Regex NonDigitInStringDigit();
     }
 }

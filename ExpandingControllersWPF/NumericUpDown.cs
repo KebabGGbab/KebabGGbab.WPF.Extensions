@@ -2,10 +2,9 @@
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
-
 namespace ExpandingControllersWPF
 {
-    [TemplatePart(Name = "PART_UpValue",  Type = typeof(RepeatButton))]
+    [TemplatePart(Name = "PART_UpValue", Type = typeof(RepeatButton))]
     [TemplatePart(Name = "PART_DownValue", Type = typeof(RepeatButton))]
     public partial class NumericUpDown : Control
     {
@@ -52,17 +51,12 @@ namespace ExpandingControllersWPF
 
         static NumericUpDown()
         {
-            ValueProperty = DependencyProperty.Register("Value", typeof(decimal), typeof(NumericUpDown), new FrameworkPropertyMetadata(0.0M, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnValueChanged, CoerceValue), ValidateValue);
+            ValueProperty = DependencyProperty.Register("Value", typeof(decimal), typeof(NumericUpDown), new FrameworkPropertyMetadata(0.0M, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, null, CoerceValue), ValidateValue);
             MinValueProperty = DependencyProperty.Register("MinValue", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(0.0M));
             MaxValueProperty = DependencyProperty.Register("MaxValue", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(100.0M));
             StepProperty = DependencyProperty.Register("Step", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(1.0M));
             RoundProperty = DependencyProperty.Register("Round", typeof(byte), typeof(NumericUpDown), new PropertyMetadata((byte)0));
             DefaultStyleKeyProperty.OverrideMetadata(typeof(NumericUpDown), new FrameworkPropertyMetadata(typeof(NumericUpDown)));
-        }
-
-        private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            
         }
 
         private static object CoerceValue(DependencyObject d, object baseValue)

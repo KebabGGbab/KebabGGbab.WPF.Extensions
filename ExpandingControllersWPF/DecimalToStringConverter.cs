@@ -31,6 +31,12 @@ namespace ExpandingControllersWPF
                 {
                     str = str.Remove(str.IndexOf(match.Value), match.Value.Length);
                 }
+                int Dash = str.IndexOf(',');
+                if (Dash != -1)
+                {
+                    string withoutDashes = str.Replace("-", "");
+                    str = '-' + withoutDashes;
+                }
                 int firstCommaIndex = str.IndexOf(',');
                 if (firstCommaIndex != -1)
                 {
