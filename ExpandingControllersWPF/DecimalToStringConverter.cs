@@ -46,7 +46,7 @@ namespace ExpandingControllersWPF
                     str = beforeFirstComma + afterFirstComma;
                 }
                 HaveComma = str.EndsWith(',') && str.IndexOf(',') > 0;
-                if (decimal.TryParse(str, out decimal result))
+                if (decimal.TryParse(str, new NumberFormatInfo { NumberDecimalSeparator = ","}, out decimal result))
                 {
                     return result;
                 }

@@ -89,12 +89,12 @@ namespace ExpandingControllersWPF
 
         private void UpValue_Click(object sender, RoutedEventArgs e)
         {
-            Value++;
+            Value += Step;
         }
 
         private void DownValue_Click(object sender, RoutedEventArgs e)
         {
-            Value--;
+            Value -= Step;
         }
     }
 }
