@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
-namespace ExpandingControllersWPF
+namespace ExpandingControllersWPF.UserControls.NumericUpDown
 {
     [TemplatePart(Name = "PART_UpValue", Type = typeof(RepeatButton))]
     [TemplatePart(Name = "PART_DownValue", Type = typeof(RepeatButton))]
@@ -62,13 +62,17 @@ namespace ExpandingControllersWPF
         private static object CoerceValue(DependencyObject d, object baseValue)
         {
             NumericUpDown control = (NumericUpDown)d;
+
             if (baseValue is not decimal value)
                 return 0.0M;
+
             value = Math.Round(value, control.Round);
+
             if (value < control.MinValue)
                 return control.MinValue;
             if (value > control.MaxValue)
                 return control.MaxValue;
+
             return value;
         }
 
@@ -96,5 +100,5 @@ namespace ExpandingControllersWPF
         {
             Value -= Step;
         }
-    }
+	}
 }
