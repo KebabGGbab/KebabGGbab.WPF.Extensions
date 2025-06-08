@@ -14,17 +14,15 @@ namespace ExpandingControllersWPF.Converters
 			}
 
 			Enum field = (Enum)parameter;
-			object[] attributes = field.GetType().GetCustomAttributes(false);
+			string name = field.ToString();
+			DisplayAttribute? attribute = field.GetType().GetField(name)?.GetCustomAttributes(false).OfType<DisplayAttribute>().FirstOrDefault();
 
-			foreach (object attribute in attributes)
+			if (attribute == null)
 			{
-				if (attribute is DisplayAttribute display)
-				{
-					return display.Name;
-				}
+				return field.ToString();
 			}
 
-			return field.ToString();
+			return attribute.Name;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
