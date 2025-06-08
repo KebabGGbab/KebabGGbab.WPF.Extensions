@@ -17,12 +17,7 @@ namespace ExpandingControllersWPF.Converters
 			string name = field.ToString();
 			DisplayAttribute? attribute = field.GetType().GetField(name)?.GetCustomAttributes(false).OfType<DisplayAttribute>().FirstOrDefault();
 
-			if (attribute == null)
-			{
-				return field.ToString();
-			}
-
-			return attribute.Name;
+			return attribute == null ? name : attribute.Name;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
