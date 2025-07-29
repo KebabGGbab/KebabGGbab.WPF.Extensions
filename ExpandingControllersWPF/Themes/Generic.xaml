@@ -1,7 +1,0 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/ExpandingControllersWPF;component/UserControls/ModifierTextBox/ModifierTextBox.xaml" />
-        <ResourceDictionary Source="/ExpandingControllersWPF;component/UserControls/NumericUpDown/NumericUpDown.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandingControllersWPF", "ExpandingControllersWPF\ExpandingControllersWPF.csproj", "{D1A828E5-675A-4D58-B4DE-51B5C8547E15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabGGbab.Extensions.WPF", "src\KebabGGbab.Extensions.WPF.csproj", "{4D37E56A-8384-A9AD-836B-5E485D3E3D24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1A828E5-675A-4D58-B4DE-51B5C8547E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1A828E5-675A-4D58-B4DE-51B5C8547E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1A828E5-675A-4D58-B4DE-51B5C8547E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1A828E5-675A-4D58-B4DE-51B5C8547E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D37E56A-8384-A9AD-836B-5E485D3E3D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D37E56A-8384-A9AD-836B-5E485D3E3D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D37E56A-8384-A9AD-836B-5E485D3E3D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D37E56A-8384-A9AD-836B-5E485D3E3D24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace ExpandingControllersWPF.UserControls.ModifierTextBox
+namespace KebabGGbab.Extensions.WPF.UserControls.ModifierTextBox
 {
     public class ModifierTextBox : TextBox
     {

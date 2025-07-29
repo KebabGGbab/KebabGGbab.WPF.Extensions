@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace ExpandingControllersWPF.UserControls.NumericUpDown
+namespace KebabGGbab.Extensions.WPF.UserControls.NumericUpDown
 {
     [ValueConversion(typeof(string), typeof(decimal))]
     public class DecimalToStringConverter : IValueConverter
