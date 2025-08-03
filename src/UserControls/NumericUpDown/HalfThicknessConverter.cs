@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace KebabGGbab.Extensions.WPF.UserControls.NumericUpDown
+namespace KebabGGbab.WPF.Extensions.UserControls.NumericUpDown
 {
     public class HalfThicknessConverter : IValueConverter
     {

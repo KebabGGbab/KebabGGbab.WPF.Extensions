@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace KebabGGbab.Extensions.WPF.Converters
+namespace KebabGGbab.WPF.Extensions.Converters
 {
 	public class FlagsEnumBoolConverter : IValueConverter
 	{

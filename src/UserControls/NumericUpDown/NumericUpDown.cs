@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
-namespace KebabGGbab.Extensions.WPF.UserControls.NumericUpDown
+namespace KebabGGbab.WPF.Extensions.UserControls.NumericUpDown
 {
     [TemplatePart(Name = "PART_UpValue", Type = typeof(RepeatButton))]
     [TemplatePart(Name = "PART_DownValue", Type = typeof(RepeatButton))]

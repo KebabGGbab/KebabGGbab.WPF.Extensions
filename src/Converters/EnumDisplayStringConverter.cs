@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Windows.Data;
 
-namespace KebabGGbab.Extensions.WPF.Converters
+namespace KebabGGbab.WPF.Extensions.Converters
 {
 	public class EnumDisplayStringConverter : IValueConverter
 	{
