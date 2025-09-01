@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
+using KebabGGbab.WPF.Extensions.Resources;
 
 namespace KebabGGbab.WPF.Extensions.Services.Localization
 {
@@ -30,7 +31,8 @@ namespace KebabGGbab.WPF.Extensions.Services.Localization
             {
                 Source = listener,
                 Path = new PropertyPath(nameof(LocalizationListener.Value)),
-                UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
+                FallbackValue = Strings.ResourcePlaceholder,
             };
 
             return binding.ProvideValue(serviceProvider);

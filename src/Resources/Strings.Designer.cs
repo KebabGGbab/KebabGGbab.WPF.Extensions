@@ -59,5 +59,14 @@ namespace KebabGGbab.WPF.Extensions.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Resource Value.
+        /// </summary>
+        internal static string ResourcePlaceholder {
+            get {
+                return ResourceManager.GetString("ResourcePlaceholder", resourceCulture);
+            }
+        }
     }
 }

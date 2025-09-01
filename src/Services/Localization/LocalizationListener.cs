@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using KebabGGbab.Localization;
+using KebabGGbab.WPF.Extensions.Resources;
 
 namespace KebabGGbab.WPF.Extensions.Services.Localization
 {
@@ -46,15 +47,22 @@ namespace KebabGGbab.WPF.Extensions.Services.Localization
 
         private object SetValue()
         {
-            object value = LocalizationManager.Instance.Localize(_key);
+            try
+            {
+                object value = LocalizationManager.Instance.Localize(_key);
 
-            if (value is string str && _args != null)
-            {
-                return string.Format(str, _args);
+                if (value is string str && _args != null)
+                {
+                    return string.Format(str, _args);
+                }
+                else
+                {
+                    return value;
+                }
             }
-            else
+            catch (ResourceNotFoundException ex)
             {
-                return value;
+                return string.Join(" ", Strings.ResourcePlaceholder, ex.Key);
             }
         }
     }
