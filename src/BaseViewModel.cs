@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace KebabGGbab.WPF.Extensions
 {
-    public abstract class MVVMBase : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public virtual void OnPropertyChanged([CallerMemberName] string? property = null)
